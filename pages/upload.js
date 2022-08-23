@@ -8,15 +8,29 @@ import {
 
 import {AiOutlineUpload} from 'react-icons/ai'
 import {useRef} from 'react'
+import axios from 'axios'
 
 
 const UploadPage = () => {
 
     const thisDoc = useRef()
+    const myURL = "https://DocumentScan.victorochieng2.repl.co/document-form"
+    const formData = new FormData();
 
-    const buttonClick = () => {
-        console.log(`This doc is called: ${thisDoc.current.files[0].name}`)
-        console.log(`This is the Metadadta: ${thisDoc.current.files[0].toString()}`)
+    const buttonClick = async() => {
+        const docType = thisDoc.current.files[0].type
+        const document = thisDoc.current.files[0]
+        if(docType==="application/pdf"){
+            console.log("correct type")
+            formData.append("filename", "My pdf file");
+            formData.append("uploadedFile", document);
+            console.log(document)
+            const response= await axios.post(myURL, formData)
+            console.log(response)
+        }else{
+            console.log(`This doc is a: ${thisDoc.current.files[0].type}`)
+        }  
+       
     }
 
     return(
@@ -28,7 +42,7 @@ const UploadPage = () => {
                 <VStack>
                     <Icon as={AiOutlineUpload} w={72} h={72} color="gray.300" />
                 </VStack>
-                <input type="file" ref={thisDoc}/>
+                <input type="file" ref={thisDoc} accept="application/pdf" />
             </Box>
 
             <Button onClick={buttonClick} background="blue.300" color="white" boxShadow="sm" _hover={{boxShadow:"lg"}} _active={{background:"blue.500", boxShadow:"sm"}}>

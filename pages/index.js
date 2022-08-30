@@ -5,6 +5,7 @@ import {
   Text,
   Button
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
 
 import {AiOutlineUpload} from 'react-icons/ai'
 import {useRef} from 'react'
@@ -14,7 +15,11 @@ import axios from 'axios'
 export default function Home() {
   const thisDoc = useRef()
   const myURL = "https://DocumentScan.victorochieng2.repl.co/document-form"
-  const formData = new FormData();
+  let formData
+
+  useEffect(()=>{
+    formData = new FormData();
+  },[])
 
   const buttonClick = async() => {
       const docType = thisDoc.current.files[0].type

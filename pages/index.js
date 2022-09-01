@@ -14,7 +14,7 @@ import axios from 'axios'
 
 export default function Home() {
   const thisDoc = useRef()
-  const myURL = "https://DocumentScan.victorochieng2.repl.co/document-form"
+  const myURL = "https://doc-scanner-360618.as.r.appspot.com/document-form"
   let formData
 
   useEffect(()=>{

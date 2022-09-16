@@ -37,9 +37,9 @@ const RevenueStatCard = (props) => {
                             borderWidth="1px"
                             boxShadow="lg"
                             borderRadius="2xl"
-                            backgroundColor={props.color}>
+                            bgGradient='linear(to-tr, #1C75E8, #46A0F0)'>
                                 <Center>
-                                    <Icon marginTop="4.5px" w="40px" h="40px" as={props.icon} />
+                                    <Icon marginTop="4.5px" w="40px" h="40px" as={props.icon} color="#FFFFFF" />
                                 </Center>
                         </Box>
 

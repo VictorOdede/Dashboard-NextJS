@@ -37,9 +37,9 @@ const StatCard = (props) => {
                             borderWidth="1px"
                             boxShadow="lg"
                             borderRadius="2xl"
-                            backgroundColor={props.color}>
+                            bgGradient={props.gradient}>
                                 <Center>
-                                    <Icon marginTop="4.5px" w="40px" h="40px" as={props.icon} />
+                                    <Icon marginTop="4.5px" w="40px" h="40px" as={props.icon} color="#FFFFFF"/>
                                 </Center>
                         </Box>
 

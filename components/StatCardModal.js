@@ -71,28 +71,29 @@ const StatCardModal = (props) => {
             </Box>
                         
 
-                        <Modal isOpen={isOpen} onClose={onClose}>
-                            <ModalOverlay />
-                            <ModalContent>
-                            <ModalHeader>Select Branch</ModalHeader>
-                            <ModalCloseButton />
-                            <ModalBody>
-                                <Select  placeholder='All branches'>
-                                <option value='option1'>Branch 1</option>
-                                <option value='option2'>Branch 2</option>
-                                <option value='option3'>Branch 3</option>
-                                </Select>
-                               
-                            </ModalBody>
+            <Modal isOpen={isOpen} onClose={onClose}> 
+                <ModalOverlay />
+                <ModalContent w={{base:"320px", md:"360px"}}>
+                <ModalHeader>Select Branch</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
 
-                            <ModalFooter>
-                                <Button colorScheme='blue' mr={3} onClick={onClose}>
-                                Close
-                                </Button>
-                            </ModalFooter>
-                            </ModalContent>
-                        </Modal>
-                </Stack>
+                    <Select  placeholder='All branches'>
+                    <option value='option1'>Branch 1</option>
+                    <option value='option2'>Branch 2</option>
+                    <option value='option3'>Branch 3</option> 
+                    </Select>
+                    
+                </ModalBody>
+
+                <ModalFooter>
+                    <Button colorScheme='blue' mr={3} w='90px' onClick={onClose}>
+                    OK
+                    </Button>
+                </ModalFooter>
+                </ModalContent>
+            </Modal>
+        </Stack>
                         
     )
 }

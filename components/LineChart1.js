@@ -30,7 +30,7 @@ const LineChart1 = (props) => {
           },
           title: {
             display: false,
-            text: 'Chart.js Bar Chart',
+            text: 'Line Chart',
           },  
         },
         scales: {
@@ -39,7 +39,7 @@ const LineChart1 = (props) => {
              {
                 grid: {
                     display: true,
-                    color: '#F4F4F4',
+                    color: '#D3D3D3',
                     borderColor: 'rgba(0,0,0,0)',
                     borderDash: [5, 4],
                     tickColor: 'rgba(0,0,0,0)'
@@ -50,7 +50,7 @@ const LineChart1 = (props) => {
             },
             Y: {
                 grid: {
-                    color: '#F4F4F4',
+                    color: '#D3D3D3',
                     borderColor: 'rgba(0,0,0,0)',
                     borderDash: [5, 4],
                     tickColor: 'rgba(0,0,0,0)'
@@ -80,7 +80,7 @@ const LineChart1 = (props) => {
       };
     return(
         <Stack>
-            <Box margin="4" padding="1" marginTop = "10" borderWidth='1px' w='420px' h='330px' boxShadow="lg" borderRadius='2xl' overflow='visible'>
+            <Box margin="4" padding="1" marginTop = "60px" borderWidth='1px' w='420px' h='330px' boxShadow="lg" borderRadius='2xl' overflow='visible'>
                             
                             <VStack spacing = "1">
                                 <Box
@@ -94,10 +94,12 @@ const LineChart1 = (props) => {
                                     boxShadow="sm" 
                                     borderRadius='2xl' 
                                     overflow='hidden'>
-                                        <Line
-                                            options={options}
-                                            data={data}
-                                        />
+                                        <Box padding="10px" pos="relative" top="10px">
+                                            <Line
+                                                options={options}
+                                                data={data}
+                                            />
+                                        </Box>
                                 </Box>
                                 <Divider  pos="relative"
                                     bottom="50px"/>

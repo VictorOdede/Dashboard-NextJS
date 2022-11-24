@@ -39,7 +39,7 @@ const BarChart1 = (props) => {
              {
                 grid: {
                     display: false,
-                    color: '#FFFFFF',
+                    color: '#D3D3D3',
                     tickColor: 'rgba(0,0,0,0)'
                 },
                 ticks: {
@@ -48,7 +48,7 @@ const BarChart1 = (props) => {
             },
             Y: {
                 grid: {
-                    color: '#ffffff',
+                    color: '#D3D3D3',
                     borderColor: 'rgba(0,0,0,0)',
                     borderDash: [5, 4],
                     tickColor: 'rgba(0,0,0,0)'
@@ -78,7 +78,7 @@ const BarChart1 = (props) => {
       };
     return(
         <Stack>
-            <Box margin="4" padding="1" marginTop = "10" borderWidth='1px' w='420px' h='330px' boxShadow="lg" borderRadius='2xl' overflow='visible'>
+            <Box margin="4" marginTop = "60px" borderWidth='1px' w={{ md:'420px'}} h={{ md:'330px'}} boxShadow="lg" borderRadius='2xl' overflow='visible'>
                             <VStack spacing = "1" >
                                 <Box
                                     margin="4"
@@ -87,21 +87,24 @@ const BarChart1 = (props) => {
                                     bgGradient='linear(to-tr, #1C75E8, #46A0F0)'
                                     padding="2"
                                     borderWidth='1px' 
-                                    w='380px' h='230px' 
+                                    w={{base:"360px", md:'380px'}} 
+                                    h='230px' 
                                     boxShadow="lg"
                                     borderRadius='2xl' 
                                     overflow='hidden'>
-                                        <Bar
-                                            options={options}
-                                            data={data}
-                                        />    
+                                        <Box padding="10px" pos="relative" top="10px">
+                                            <Bar
+                                                options={options}
+                                                data={data}
+                                            />    
+                                        </Box>
                                 </Box>
                                 <Divider  pos="relative"
                                     bottom="50px"/>
                                 <Box  pos="relative"
-                                    bottom="50px"
+                                    bottom={{md:"60px"}}
                                     w="380px"
-                                    padding="2">
+                                    padding="15px">
                                     <VStack spacing="3px" align="flex-start" >
                             
                                         <Stat>
@@ -115,7 +118,7 @@ const BarChart1 = (props) => {
                                     </VStack>
                                 </Box>
                             </VStack>
-                        </Box>
+            </Box>
         </Stack>
     )
 }

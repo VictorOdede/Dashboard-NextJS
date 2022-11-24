@@ -26,7 +26,10 @@ const Header = () => {
             <Link href='/'>
                 <a>
                     < Box marginLeft='24px' maxW='180'>
-                        <Image src='/lipa.png' alt='Lipa logo' />
+                      <Button fontSize='md' fontWeight='semibold' color='white' bgColor='#18216D'  _hover={{bgColor:'blue.300', boxShadow: 'md'}}
+                      _active={{ boxShadow: 'lg' }}>
+                        LOGO
+                      </Button>
                     </Box>
                 </a>
             </Link>
@@ -34,7 +37,7 @@ const Header = () => {
 
               <HStack spacing='48px' marginRight='36px'>
 
-                <Link href="https://lipa-dashboard.vercel.app/">
+                {/* <Link href="https://lipa-dashboard.vercel.app/">
                   <a>
                       <Box as='button' fontSize='lg' fontWeight='semibold' color='#18216D'  _hover={{color:'blue.300'}}>DASHBOARD</Box>
                   </a>
@@ -53,7 +56,7 @@ const Header = () => {
                       SIGN OUT
                       </Button>
                   </a>
-                </Link>
+                </Link> */}
               </HStack>
           
         </Flex>

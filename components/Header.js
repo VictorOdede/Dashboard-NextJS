@@ -24,13 +24,9 @@ const Header = () => {
               height='96px'
               >
             <Link href='/'>
-                <a>
-                    < Box marginLeft='24px' maxW='180'>
-                      <Button fontSize='md' fontWeight='semibold' color='white' bgColor='#18216D'  _hover={{bgColor:'blue.300', boxShadow: 'md'}}
-                      _active={{ boxShadow: 'lg' }}>
-                        LOGO
-                      </Button>
-                    </Box>
+                <a> 
+                  <Box marginLeft='24px' maxW='180' as='button' fontSize='lg' fontWeight='semibold' color='#18216D'  _hover={{color:'blue.300'}}>TABLES</Box>
+
                 </a>
             </Link>
             <Spacer/>
